@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LtkdK22CNT3Lesson10DbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="LtkdAccount">
+    <Key>
+      <PropertyRef Name="LtkdID" />
+    </Key>
+    <Property Name="LtkdID" Type="Int32" Nullable="false" />
+    <Property Name="LtkdUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LtkdPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LtkdFullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LtkdEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LtkdPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LtkdActive" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="LtkdK22CNT3Lesson10DbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="LtkdAccount" EntityType="Self.LtkdAccount" />
+  </EntityContainer>
+</Schema>

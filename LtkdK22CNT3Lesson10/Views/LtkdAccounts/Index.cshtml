@@ -1,0 +1,64 @@
+﻿@model IEnumerable<LtkdK22CNT3Lesson10.Models.LtkdAccount>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LtkdLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LtkdUserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LtkdPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LtkdFullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LtkdEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LtkdPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LtkdActive)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LtkdUserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LtkdPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LtkdFullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LtkdEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LtkdPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LtkdActive)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LtkdID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LtkdID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LtkdID })
+        </td>
+    </tr>
+}
+
+</table>

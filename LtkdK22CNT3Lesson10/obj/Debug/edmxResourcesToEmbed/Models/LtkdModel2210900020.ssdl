@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LtkdK22CNT3Lesson10DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="LtkdAccount">
+    <Key>
+      <PropertyRef Name="LtkdID" />
+    </Key>
+    <Property Name="LtkdID" Type="int" Nullable="false" />
+    <Property Name="LtkdUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LtkdPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="LtkdFullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LtkdEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="LtkdPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="LtkdActive" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="LtkdK22CNT3Lesson10DbModelStoreContainer">
+    <EntitySet Name="LtkdAccount" EntityType="Self.LtkdAccount" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
